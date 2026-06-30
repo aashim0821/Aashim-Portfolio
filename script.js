@@ -21,9 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Cursor Tracker (Desktop) ---
     const cursorGlow = document.getElementById('cursorGlow');
     if (cursorGlow && window.matchMedia("(min-width: 1024px)").matches && !prefersReducedMotion) {
+        let cursorX = 0, cursorY = 0;
+        let cursorTicking = false;
         document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.left = `${e.clientX}px`;
-            cursorGlow.style.top = `${e.clientY}px`;
+            cursorX = e.clientX;
+            cursorY = e.clientY;
+            if (!cursorTicking) {
+                requestAnimationFrame(() => {
+                    cursorGlow.style.left = `${cursorX}px`;
+                    cursorGlow.style.top = `${cursorY}px`;
+                    cursorTicking = false;
+                });
+                cursorTicking = true;
+            }
         });
     }
 
@@ -32,30 +42,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToTop = document.getElementById('backToTop');
     let lastScrollY = window.scrollY;
 
+    let scrollTicking = false;
     const handleScroll = () => {
-        const scrollY = window.scrollY;
+        if (!scrollTicking) {
+            requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
 
-        if (scrollY > 60) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+                if (scrollY > 60) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                if (scrollY > lastScrollY && scrollY > 200) {
+                    navbar.classList.add('hidden');
+                } else {
+                    navbar.classList.remove('hidden');
+                }
+
+                if (backToTop) {
+                    if (scrollY > 500) {
+                        backToTop.classList.add('visible');
+                    } else {
+                        backToTop.classList.remove('visible');
+                    }
+                }
+
+                lastScrollY = scrollY;
+                scrollTicking = false;
+            });
+            scrollTicking = true;
         }
-
-        if (scrollY > lastScrollY && scrollY > 200) {
-            navbar.classList.add('hidden');
-        } else {
-            navbar.classList.remove('hidden');
-        }
-
-        if (backToTop) {
-            if (scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        }
-
-        lastScrollY = scrollY;
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -185,18 +202,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const magneticElements = document.querySelectorAll('.magnetic-btn');
         
         magneticElements.forEach(btn => {
+            let btnTicking = false;
             btn.addEventListener('mousemove', (e) => {
-                const rect = btn.getBoundingClientRect();
-                const h = rect.width / 2;
-                const v = rect.height / 2;
-                const x = e.clientX - rect.left - h;
-                const y = e.clientY - rect.top - v;
-                
-                // Max pull distance
-                const pullX = x * 0.3; 
-                const pullY = y * 0.3;
-                
-                btn.style.transform = `translate(${pullX}px, ${pullY}px)`;
+                if (!btnTicking) {
+                    const clientX = e.clientX;
+                    const clientY = e.clientY;
+                    requestAnimationFrame(() => {
+                        const rect = btn.getBoundingClientRect();
+                        const h = rect.width / 2;
+                        const v = rect.height / 2;
+                        const x = clientX - rect.left - h;
+                        const y = clientY - rect.top - v;
+                        
+                        const pullX = x * 0.3; 
+                        const pullY = y * 0.3;
+                        
+                        btn.style.transform = `translate(${pullX}px, ${pullY}px)`;
+                        btnTicking = false;
+                    });
+                    btnTicking = true;
+                }
             });
             
             btn.addEventListener('mouseleave', () => {
@@ -209,22 +234,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
 
+    let highlightTicking = false;
     const highlightNav = () => {
-        const scrollY = window.scrollY + 200;
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+        if (!highlightTicking) {
+            requestAnimationFrame(() => {
+                const scrollY = window.scrollY + 200;
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
 
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.style.color = '';
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.style.color = 'var(--accent)';
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.style.color = '';
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.style.color = 'var(--accent)';
+                            }
+                        });
                     }
                 });
-            }
-        });
+                highlightTicking = false;
+            });
+            highlightTicking = true;
+        }
     };
 
     window.addEventListener('scroll', highlightNav, { passive: true });
