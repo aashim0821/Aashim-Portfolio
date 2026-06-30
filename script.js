@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightNav, { passive: true });
 
     // --- Parallax & Hover Glows ---
-    const aboutCard = document.querySelector('.about-card-inner');
+    const aboutCard = document.querySelector('.about-image-wrapper');
     if (aboutCard && !prefersReducedMotion && window.matchMedia("(min-width: 768px)").matches) {
         aboutCard.addEventListener('mousemove', (e) => {
             const rect = aboutCard.getBoundingClientRect();
