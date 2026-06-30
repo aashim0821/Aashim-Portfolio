@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashim Ahamed — Web Developer & Digital Designer</title>
+    <meta name="description" content="I build stunning websites and craft digital designs that elevate your brand. From landing pages to brochures, menus, and beyond — premium work, delivered fast.">
+    <meta name="keywords" content="web developer, digital designer, freelance, brochure design, menu design, landing pages, Aashim Ahamed">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aashim Ahamed — Web Developer & Digital Designer">
+    <meta property="og:description" content="Premium websites, landing pages, brochures, menus & more — designed with precision, delivered with speed.">
+    <meta property="og:url" content="https://aashimahamed.com">
+    <meta property="og:site_name" content="Aashim Ahamed">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aashim Ahamed — Web Developer & Digital Designer">
+    <meta name="twitter:description" content="Premium websites, landing pages, brochures, menus & more — designed with precision, delivered with speed.">
+
+    <!-- Theme Color & Favicon -->
+    <meta name="theme-color" content="#08080c">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23c9a96e'>A</text></svg>">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Aashim Ahamed",
+        "description": "Freelance web developer and digital designer specializing in websites, landing pages, brochures, and menu design.",
+        "url": "https://aashimahamed.com",
+        "telephone": "+916381227334",
+        "email": "aashimahamed0807@gmail.com",
+        "areaServed": "Worldwide",
+        "serviceType": ["Web Development", "Digital Design", "Brochure Design", "Menu Design", "Brand Identity"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-logo">
+            <span class="preloader-a">A</span><span class="preloader-dot">.</span>
+        </div>
+    </div>
+
+    <!-- Cursor Glow (desktop only) -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Grain Texture Overlay -->
+    <svg class="grain-overlay" aria-hidden="true">
+        <filter id="grain-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain-filter)"/>
+    </svg>
+
+    <!-- Ambient Background -->
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo magnetic-btn" aria-label="Aashim Ahamed — Home">
+                <span class="logo-text">A</span><span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services" class="magnetic-btn">Services</a></li>
+                <li><a href="#portfolio" class="magnetic-btn">Work</a></li>
+                <li><a href="#about" class="magnetic-btn">About</a></li>
+                <li><a href="#contact" class="nav-cta magnetic-btn">Let's Talk</a></li>
+            </ul>
+            <button class="mobile-toggle magnetic-btn" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+        <ul class="mobile-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Let's Talk</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Projects
+            </div>
+            <h1 class="hero-title reveal-text">
+                I craft digital
+                <span class="hero-accent">experiences</span>
+                that elevate brands.
+            </h1>
+            <p class="hero-subtitle">
+                Websites, landing pages, brochures, menus & more — designed with precision, 
+                delivered with speed. Premium work without the agency price tag.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary magnetic-btn" id="hero-cta-primary">
+                    <span>Start a Project</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#portfolio" class="btn btn-ghost magnetic-btn" id="hero-cta-work">
+                    <span>View My Work</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">✦</span>
+                    <span class="stat-label">Pixel-Perfect Design</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">✦</span>
+                    <span class="stat-label">Fast Turnaround</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">✦</span>
+                    <span class="stat-label">AI-Accelerated</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title reveal-text">Services tailored to <br><em>your</em> brand.</h2>
+                <p class="section-subtitle">From your first website to a full brand refresh — I deliver work that makes your business look its absolute best.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <path d="M8 21h8M12 17v4"/>
+                        </svg>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom-built, responsive websites that look stunning on every device. From single-page sites to multi-page platforms — clean code, fast loading, SEO-ready.</p>
+                    <ul class="service-tags">
+                        <li>Landing Pages</li>
+                        <li>Business Sites</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="service-card featured" data-animate>
+                    <div class="card-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Digital Design</h3>
+                    <p>Eye-catching brochures, modernized menus, promotional flyers, and social media graphics. Everything your brand needs to stand out — on screen and in print.</p>
+                    <ul class="service-tags">
+                        <li>Brochures</li>
+                        <li>Menus</li>
+                        <li>Flyers</li>
+                        <li>Social Media</li>
+                    </ul>
+                </div>
+                <div class="service-card" data-animate>
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Refresh</h3>
+                    <p>Already have a business but your digital presence feels dated? I'll modernize your look — new website, updated collateral, cohesive brand identity across all touchpoints.</p>
+                    <ul class="service-tags">
+                        <li>Redesigns</li>
+                        <li>Modernization</li>
+                        <li>Brand Identity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Selected Work</span>
+                <h2 class="section-title reveal-text">Projects that speak <br><em>volumes</em>.</h2>
+                <p class="section-subtitle">A curated selection of recent projects showcasing what I can build for your business.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card large" data-animate>
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                        <div class="portfolio-mockup">
+                            <div class="mockup-browser">
+                                <div class="browser-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="mockup-content cafe-mockup">
+                                    <div class="mock-nav"></div>
+                                    <div class="mock-hero-text"></div>
+                                    <div class="mock-hero-sub"></div>
+                                    <div class="mock-grid">
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-type">Website</span>
+                        <h3>Artisan Café — Landing Page</h3>
+                        <p>A warm, inviting landing page for a specialty coffee shop featuring online menu, location map, and reservation booking.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-animate>
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);">
+                        <div class="portfolio-mockup">
+                            <div class="mockup-doc">
+                                <div class="doc-header"></div>
+                                <div class="doc-columns">
+                                    <div class="doc-col">
+                                        <div class="doc-img"></div>
+                                        <div class="doc-text"></div>
+                                        <div class="doc-text short"></div>
+                                    </div>
+                                    <div class="doc-col">
+                                        <div class="doc-img"></div>
+                                        <div class="doc-text"></div>
+                                        <div class="doc-text short"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-type">Brochure</span>
+                        <h3>EduBridge Academy</h3>
+                        <p>Tri-fold brochure for an educational institution highlighting programs and campus life.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-animate>
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #1a1a1a 0%, #c9a96e 100%);">
+                        <div class="portfolio-mockup">
+                            <div class="mockup-menu">
+                                <div class="menu-title"></div>
+                                <div class="menu-divider"></div>
+                                <div class="menu-item"><span></span><span class="menu-price"></span></div>
+                                <div class="menu-item"><span></span><span class="menu-price"></span></div>
+                                <div class="menu-item"><span></span><span class="menu-price"></span></div>
+                                <div class="menu-divider"></div>
+                                <div class="menu-item"><span></span><span class="menu-price"></span></div>
+                                <div class="menu-item"><span></span><span class="menu-price"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-type">Menu Design</span>
+                        <h3>The Golden Plate</h3>
+                        <p>Modern, elegant menu design for an upscale restaurant — clean layout, easy to read, beautiful to hold.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title reveal-text">Simple. Fast. <br><em>Exceptional</em>.</h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step" data-animate>
+                    <div class="step-number">01</div>
+                    <h3>Tell Me Your Vision</h3>
+                    <p>Share what you need — a website, a brochure, a menu redesign. We'll chat on WhatsApp or email to nail down the details.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step" data-animate>
+                    <div class="step-number">02</div>
+                    <h3>I Design & Build</h3>
+                    <p>Using AI-accelerated tools, I craft your deliverables at speed — without sacrificing an ounce of quality. You'll see drafts quickly.</p>
+                </div>
+                <div class="process-connector"></div>
+                <div class="process-step" data-animate>
+                    <div class="step-number">03</div>
+                    <h3>Review & Launch</h3>
+                    <p>You review, I refine. Once you're thrilled, we go live. Simple as that — no dragged-out timelines, no surprises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Love</span>
+                <h2 class="section-title reveal-text">Words that <br><em>mean the most</em>.</h2>
+                <p class="section-subtitle">Happy clients are the best proof of great work.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-animate>
+                    <div class="testimonial-quote" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="testimonial-text">"Aashim transformed our outdated café website into something truly beautiful. Our online reservations have tripled since launch."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">R</div>
+                        <div class="author-info">
+                            <strong>Rahul M.</strong>
+                            <span>Café Owner, Chennai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate>
+                    <div class="testimonial-quote" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="testimonial-text">"The brochure designs were stunning — clean, modern, and exactly what our institution needed. Delivered ahead of schedule too."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">P</div>
+                        <div class="author-info">
+                            <strong>Priya S.</strong>
+                            <span>Director, EduBright Academy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-animate>
+                    <div class="testimonial-quote" aria-hidden="true">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" opacity="0.15">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11h4v10H0z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="testimonial-text">"Quick turnaround, beautiful work, great communication. Our new menu has been getting compliments from every single customer."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar" aria-hidden="true">K</div>
+                        <div class="author-info">
+                            <strong>Karthik D.</strong>
+                            <span>Restaurant Owner, Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-animate>
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title reveal-text">Hi, I'm <br><em>Aashim</em>.</h2>
+                    <p class="about-text">
+                        I'm a freelance web developer and digital designer who believes every business — 
+                        whether it's a neighborhood café or a growing institution — deserves a digital presence 
+                        that looks world-class.
+                    </p>
+                    <p class="about-text">
+                        I combine clean front-end development with modern design tools and AI-powered workflows 
+                        to deliver agency-quality work at freelancer speed. No bloated teams, no endless meetings — 
+                        just sharp work, delivered on time.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>AI-Accelerated</strong>
+                                <span>Faster delivery without cutting corners</span>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <circle cx="12" cy="12" r="6"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Detail-Obsessed</strong>
+                                <span>Every pixel, every fold, every word matters</span>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <div class="highlight-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Direct Communication</strong>
+                                <span>You talk to me — not a middleman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-animate>
+                    <div class="about-card">
+                        <div class="about-card-inner">
+                            <div class="card-pattern"></div>
+                            <div class="card-info">
+                                <div class="card-name">Aashim Ahamed</div>
+                                <div class="card-role">Web Developer & Digital Designer</div>
+                                <div class="card-divider"></div>
+                                <div class="card-motto">"Design is not just what it looks like. Design is how it works."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content" data-animate>
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title reveal-text">Ready to elevate <br><em>your brand</em>?</h2>
+                    <p class="contact-text">
+                        Have a project in mind? Let's make it happen. Reach out through any channel below 
+                        — I typically respond within a few hours.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/916381227334" target="_blank" rel="noopener noreferrer" class="contact-method whatsapp magnetic-btn" id="contact-whatsapp">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <strong>WhatsApp</strong>
+                                <span>Quick & easy — let's chat</span>
+                            </div>
+                            <svg class="method-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:aashimahamed0807@gmail.com" class="contact-method email magnetic-btn" id="contact-email">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="M22 4L12 13L2 4"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <strong>Email</strong>
+                                <span>aashimahamed0807@gmail.com</span>
+                            </div>
+                            <svg class="method-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+916381227334" class="contact-method phone magnetic-btn" id="contact-phone">
+                            <div class="method-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="method-details">
+                                <strong>Phone</strong>
+                                <span>+91 6381227334</span>
+                            </div>
+                            <svg class="method-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-cta-card" data-animate>
+                    <div class="cta-card-glow"></div>
+                    <h3 class="reveal-text">Let's build something <br><span>remarkable</span> together.</h3>
+                    <p>Whether it's a website, a menu, or a complete brand overhaul — I'm ready when you are.</p>
+                    <a href="https://wa.me/916381227334?text=Hi%20Aashim!%20I'm%20interested%20in%20your%20services." class="btn btn-primary btn-large magnetic-btn" target="_blank" rel="noopener noreferrer" id="cta-whatsapp-main">
+                        <span>Message Me on WhatsApp</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">A</span><span class="logo-dot">.</span>
+                    <p>Crafting digital experiences that elevate brands.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#services">Services</a>
+                    <a href="#portfolio">Work</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aashim Ahamed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top magnetic-btn" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Floating WhatsApp CTA -->
+    <a href="https://wa.me/916381227334?text=Hi%20Aashim!%20I'm%20interested%20in%20your%20services." class="floating-whatsapp magnetic-btn" id="floatingWhatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="whatsapp-pulse"></span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
